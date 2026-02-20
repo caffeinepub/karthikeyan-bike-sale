@@ -1,0 +1,45 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace logo with user-uploaded design",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Replace the circular winged logo image in the Header component with the user-uploaded logo design showing the KARTHIKEYAN BIKE SHOWROOM branding with winged emblem and silver metallic styling",
+      "acceptanceCriteria": [
+        "The Header component displays the new logo image from the uploaded files",
+        "The logo maintains its circular shape and responsive sizing",
+        "The logo is clickable and maintains existing navigation behavior",
+        "The visual style matches the uploaded design with silver/metallic finish on black background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Update the logo image source from the placeholder SVG to reference the generated logo asset at frontend/public/assets/generated/karthikeyan-logo.dim_200x200.png. Maintain the existing circular shape styling, responsive sizing classes (h-12 w-12), and clickable navigation behavior with smooth scroll to top functionality."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Update any logo references in the selected page elements to use the new uploaded logo design if they reference the logo image",
+      "acceptanceCriteria": [
+        "All selected elements that reference the logo image are updated to use the new design",
+        "Visual consistency is maintained across all logo instances",
+        "No broken image references remain in the selected elements"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/BikeGallery.tsx",
+          "operation": "modify",
+          "description": "Review the BikeGallery component section heading and container elements to check if any logo images are referenced. If found, update them to use frontend/public/assets/generated/karthikeyan-logo.dim_200x200.png to ensure visual consistency across all logo instances."
+        },
+        {
+          "path": "frontend/src/components/HeroBanner.tsx",
+          "operation": "modify",
+          "description": "Review the HeroBanner component for any logo image references in the hero section container or call-to-action button elements. If found, update them to use frontend/public/assets/generated/karthikeyan-logo.dim_200x200.png to maintain visual consistency."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor definition serving as the backend entry point with no implemented functionality.",
+  "feature_evidence.json": "Empty feature evidence report JSON file with no features documented.",
+  "frontend-file-summaries.txt": "JSON metadata file containing summaries of all frontend component files, describing a bike showroom application with gallery, contact, and branding components.",
+  "frontend/index.css": "Tailwind CSS configuration with custom OKLCH color system defining light and dark theme variables for a black background with white text and red accents.",
+  "frontend/index.html": "HTML entry point for the Karthikeyan Bike Sale application that loads the React app from main.tsx.",
+  "frontend/src/App.tsx": "Root React component that assembles the complete bike showroom page layout with Header, HeroBanner, BikeGallery, ContactSection, and Footer.",
+  "frontend/src/components/BikeCard.tsx": "Reusable bike card component displaying bike image, name, price, specifications (engine, power, weight, type), and an enquiry call-to-action button with hover effects.",
+  "frontend/src/components/BikeGallery.tsx": "Gallery section component that renders a responsive grid of BikeCard components from the bikes data array with a title and description header.",
+  "frontend/src/components/ContactSection.tsx": "Contact information section displaying phone number, Instagram handle, and physical address in a three-column grid with call-to-action buttons.",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and attribution link to caffeine.ai with UTM tracking parameters based on the current hostname.",
+  "frontend/src/components/Header.tsx": "Fixed header component with Karthikeyan Bike Sale logo, branding text, phone number, and Instagram handle with responsive design.",
+  "frontend/src/components/HeroBanner.tsx": "Full-screen hero section with background image, bold branding text, call-to-action buttons for calling and viewing bikes, and smooth scroll functionality.",
+  "frontend/src/data/bikes.ts": "TypeScript data file defining the Bike interface and exporting an array of three bike objects (Red Thunder Sport, Black Phantom Elite, White Lightning Pro) with specifications and pricing.",
+  "frontend/src/hooks/useActor.ts": "React hook for managing Internet Identity authentication and creating backend actors with automatic query invalidation when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React hook and context provider for Internet Identity authentication on ICP, managing login state, identity storage, and delegation validation with configurable AuthClient options.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks when backend functionality is implemented.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables defining a dark theme color palette using OKLCH color space for UI components including sidebar, charts, and semantic colors.",
+  "frontend/src/main.tsx": "Application entry point that renders the root React component wrapped with QueryClientProvider and InternetIdentityProvider for state management and authentication.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom OKLCH-based color system, container settings, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project metadata for Karthikeyan Bike Showroom application tracking pending feature requests to replace the circular winged logo in the Header component and update logo references across selected page elements."
+}

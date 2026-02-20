@@ -1,0 +1,44 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-20T03:47:20.480Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 0,
+    "items": [
+      {
+        "id": "REQ-7",
+        "summary": "Replace the circular winged logo image in the Header component (XPath: /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]) with the user-uploaded logo design showing the KARTHIKEYAN BIKE SHOWROOM branding with winged emblem and silver metallic styling",
+        "status": "missing",
+        "plannedFiles": [
+          "frontend/src/components/Header.tsx"
+        ],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Update any logo references in the selected page elements (XPaths: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2], /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/button[1], /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[1]/h2[1]) to use the new uploaded logo design if they reference the logo image",
+        "status": "missing",
+        "plannedFiles": [
+          "frontend/src/components/BikeGallery.tsx",
+          "frontend/src/components/HeroBanner.tsx"
+        ],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/karthikeyan-logo.dim_200x200.png",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

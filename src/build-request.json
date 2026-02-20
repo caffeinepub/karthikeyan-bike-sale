@@ -1,0 +1,58 @@
+{
+  "kind": "build_request",
+  "title": "Replace logo with user-uploaded design",
+  "projectName": "Karthikeyan Bike Sale",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Replace the circular winged logo image in the Header component (XPath: /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]) with the user-uploaded logo design showing the KARTHIKEYAN BIKE SHOWROOM branding with winged emblem and silver metallic styling",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-current"
+        ],
+        "quotes": [
+          "Change your logo"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Header component displays the new logo image from the uploaded files",
+        "The logo maintains its circular shape and responsive sizing",
+        "The logo is clickable and maintains existing navigation behavior",
+        "The visual style matches the uploaded design with silver/metallic finish on black background"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Update any logo references in the selected page elements (XPaths: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2], /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/button[1], /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[1]/h2[1]) to use the new uploaded logo design if they reference the logo image",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-current"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All selected elements that reference the logo image are updated to use the new design",
+        "Visual consistency is maintained across all logo instances",
+        "No broken image references remain in the selected elements"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the backend",
+    "Preserve existing Header component structure and functionality",
+    "Maintain responsive design and circular logo shape"
+  ],
+  "nonGoals": [
+    "Changing the KARTHIKEYAN branding text",
+    "Modifying header layout or positioning",
+    "Altering other visual elements beyond the logo"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Circular logo with winged emblem, KARTHIKEYAN BIKE SHOWROOM text, silver metallic styling on black background with chrome border (karthikeyan-logo.dim_200x200.png)"
+    ],
+    "edits": []
+  }
+}
