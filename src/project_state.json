@@ -1,37 +1,31 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Bike showroom web application",
+  "summary": "New project",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Circular logo with winged emblem, KARTHIKEYAN BIKE SHOWROOM text, silver metallic styling on black background with chrome border (karthikeyan-logo.dim_200x200.png)",
-  "existing_features": [],
-  "new_feature_requests": [
+  "existing_features": [
     {
-      "id": "AR-1",
-      "summary": "Change logo",
-      "reqIds": [],
-      "status": "pending"
+      "id": "feature-convert-the-logo-image-in-the-header-xpath-html-1-body-1-div-1-div-1-header-1-div-1-div-1-div-1-img-1-to-a-3d-rendered-element-using-three-js-and-react-three-fiber-maintaining-the-circular-winged-emblem-design-with-metallic-chrome-appearance-and-rotating-animation",
+      "title": "Convert the logo image in the header (XPath: /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/img[1]) to a 3D rendered element using Three.js and React Three Fiber, maintaining the circular winged emblem design with metallic chrome appearance and rotating animation",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
     },
     {
-      "id": "AR-2",
-      "summary": "Replace the circular winged logo image in the Header component (XPath: /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]) with the user-uploaded logo design showing the KARTHIKEYAN BIKE SHOWROOM branding with winged emblem and silver metallic styling",
+      "id": "feature-convert-the-bike-cards-in-the-gallery-section-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-div-2-div-1-div-1-to-3d-rendered-motorcycle-models-using-three-js-and-react-three-fiber-with-interactive-rotation-on-hover",
+      "title": "Convert the bike cards in the gallery section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/div[2]/div[1]/div[1]) to 3D rendered motorcycle models using Three.js and React Three Fiber with interactive rotation on hover",
       "reqIds": [
-        "REQ-7"
+        "REQ-2"
       ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Update any logo references in the selected page elements (XPaths: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2], /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/button[1], /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[1]/h2[1]) to use the new uploaded logo design if they reference the logo image",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "status": "pending"
+      "version": 1
     }
   ],
-  "projectName": "Karthikeyan Bike Sale",
+  "new_feature_requests": [],
+  "gameProjectType": "3d",
+  "projectName": "Make logo and bike card 3D",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

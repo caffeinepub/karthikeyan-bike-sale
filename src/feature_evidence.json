@@ -1,4 +1,44 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-convert-the-logo-image-in-the-header-xpath-html-1-body-1-div-1-div-1-header-1-div-1-div-1-div-1-img-1-to-a-3d-rendered-element-using-three-js-and-react-three-fiber-maintaining-the-circular-winged-emblem-design-with-metallic-chrome-appearance-and-rotating-animation",
+      "featureTitle": "Convert the logo image in the header (XPath: /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/img[1]) to a 3D rendered element using Three.js and React Three Fiber, maintaining the circular winged emblem design with metallic chrome appearance and rotating animation",
+      "files": [
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/Logo3D.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-convert-the-bike-cards-in-the-gallery-section-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-1-div-2-div-2-div-1-div-1-to-3d-rendered-motorcycle-models-using-three-js-and-react-three-fiber-with-interactive-rotation-on-hover",
+      "featureTitle": "Convert the bike cards in the gallery section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[1]/div[2]/div[2]/div[1]/div[1]) to 3D rendered motorcycle models using Three.js and React Three Fiber with interactive rotation on hover",
+      "files": [
+        "frontend/src/components/BikeCard.tsx",
+        "frontend/src/components/BikeModel3D.tsx",
+        "frontend/src/data/bikes.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

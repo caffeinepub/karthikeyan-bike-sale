@@ -1,13 +1,15 @@
 {
   "frontend/src/App.tsx": "Main application component that renders the complete bike showroom layout with Header, HeroBanner, BikeGallery, ContactSection, and Footer components.",
-  "frontend/src/components/Header.tsx": "Fixed header component displaying the circular winged KARTHIKEYAN BIKE SHOWROOM logo, branding text, phone number, and Instagram handle with responsive design.",
+  "frontend/src/components/Header.tsx": "Fixed header component displaying the 3D rotating logo, branding text, phone number, and Instagram handle with responsive design.",
   "frontend/src/components/HeroBanner.tsx": "Full-viewport hero section with dramatic showroom background image, bold branding text, call-to-action buttons, and smooth scroll functionality.",
   "frontend/src/components/BikeGallery.tsx": "Gallery section that displays a responsive grid of bike cards with title and description.",
-  "frontend/src/components/BikeCard.tsx": "Individual bike card component showing bike image, name, price, specifications, and enquiry button with hover effects.",
+  "frontend/src/components/BikeCard.tsx": "Individual bike card component showing 3D motorcycle model with interactive rotation, bike name, price, specifications, and enquiry button with hover effects.",
   "frontend/src/components/ContactSection.tsx": "Contact information section displaying phone number, Instagram handle, and physical address in a three-column grid layout with call-to-action.",
   "frontend/src/components/Footer.tsx": "Footer component with copyright information and attribution link to caffeine.ai with UTM tracking parameters.",
-  "frontend/src/data/bikes.ts": "TypeScript data file defining the Bike interface and exporting an array of bike objects with specifications and pricing information.",
+  "frontend/src/data/bikes.ts": "TypeScript data file defining the Bike interface with color field and exporting an array of bike objects with specifications, pricing, and color information for 3D rendering.",
   "frontend/src/index.css": "Global CSS file with OKLCH color system customized for black background, white text, and red accent colors matching the showroom aesthetic.",
   "frontend/tailwind.config.js": "Tailwind configuration file with extended theme settings for the bike showroom design system.",
-  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks when backend functionality is added."
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks when backend functionality is added.",
+  "frontend/src/components/Logo3D.tsx": "3D rotating logo component using React Three Fiber that renders the circular winged emblem with metallic chrome material and continuous Y-axis rotation animation.",
+  "frontend/src/components/BikeModel3D.tsx": "3D motorcycle model component using React Three Fiber with color-based styling, interactive OrbitControls for rotation, auto-rotate animation, and shadow effects."
 }

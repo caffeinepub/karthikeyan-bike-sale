@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react';
 import { SiInstagram } from 'react-icons/si';
+import Logo3D from './Logo3D';
 
 export default function Header() {
   return (
@@ -7,11 +8,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img 
-              src="/assets/generated/karthikeyan-logo.dim_200x200.png" 
-              alt="Karthikeyan Bike Showroom Logo" 
-              className="h-12 w-12 object-contain"
-            />
+            <Logo3D />
             <div>
               <h1 className="text-xl font-bold text-white tracking-wider">KARTHIKEYAN</h1>
               <p className="text-xs text-red-500 font-semibold tracking-widest">BIKE SALE</p>

@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react';
 import type { Bike } from '../data/bikes';
+import BikeModel3D from './BikeModel3D';
 
 interface BikeCardProps {
   bike: Bike;
@@ -9,13 +10,8 @@ export default function BikeCard({ bike }: BikeCardProps) {
   return (
     <div className="group relative bg-zinc-900 rounded-sm overflow-hidden border border-white/5 hover:border-red-500/50 transition-all duration-300 transform hover:scale-[1.02]">
       <div className="relative aspect-[4/3] overflow-hidden bg-zinc-950">
-        <img 
-          src={bike.image} 
-          alt={bike.name}
-          loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+        <BikeModel3D color={bike.color} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
       </div>
       
       <div className="p-6 space-y-4">

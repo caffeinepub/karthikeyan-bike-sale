@@ -1,43 +1,62 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace logo with user-uploaded design",
+  "title": "Make logo and bike card 3D",
   "requirements": [
     {
-      "id": "REQ-7",
-      "summary": "Replace the circular winged logo image in the Header component with the user-uploaded logo design showing the KARTHIKEYAN BIKE SHOWROOM branding with winged emblem and silver metallic styling",
+      "id": "REQ-1",
+      "summary": "Convert header logo to 3D rendered element using Three.js and React Three Fiber with metallic chrome appearance and rotating animation",
       "acceptanceCriteria": [
-        "The Header component displays the new logo image from the uploaded files",
-        "The logo maintains its circular shape and responsive sizing",
-        "The logo is clickable and maintains existing navigation behavior",
-        "The visual style matches the uploaded design with silver/metallic finish on black background"
+        "Logo in header is rendered as a 3D Three.js scene",
+        "3D logo maintains the circular winged emblem design from the uploaded image",
+        "Logo has metallic/chrome material appearance",
+        "Logo rotates smoothly on the Y-axis",
+        "3D logo is responsive and scales appropriately with the header"
       ],
       "file_operations": [
         {
+          "path": "frontend/package.json",
+          "operation": "modify",
+          "description": "Add Three.js, React Three Fiber (@react-three/fiber), and React Three Drei (@react-three/drei) dependencies to support 3D rendering capabilities"
+        },
+        {
+          "path": "frontend/src/components/Logo3D.tsx",
+          "operation": "create",
+          "description": "Create a 3D logo component using React Three Fiber that renders the circular winged emblem design from frontend/public/assets/generated/logo.dim_200x200.png as a texture on a 3D geometry with metallic/chrome MeshStandardMaterial and continuous Y-axis rotation animation using useFrame hook"
+        },
+        {
           "path": "frontend/src/components/Header.tsx",
           "operation": "modify",
-          "description": "Update the logo image source from the placeholder SVG to reference the generated logo asset at frontend/public/assets/generated/karthikeyan-logo.dim_200x200.png. Maintain the existing circular shape styling, responsive sizing classes (h-12 w-12), and clickable navigation behavior with smooth scroll to top functionality."
+          "description": "Replace the static logo image element with the Logo3D component, wrapping it in a Canvas from @react-three/fiber with appropriate sizing to maintain the header layout and responsive design"
         }
       ]
     },
     {
-      "id": "REQ-8",
-      "summary": "Update any logo references in the selected page elements to use the new uploaded logo design if they reference the logo image",
+      "id": "REQ-2",
+      "summary": "Convert bike cards to 3D motorcycle models using Three.js and React Three Fiber with interactive rotation on hover",
       "acceptanceCriteria": [
-        "All selected elements that reference the logo image are updated to use the new design",
-        "Visual consistency is maintained across all logo instances",
-        "No broken image references remain in the selected elements"
+        "Each bike card displays a 3D motorcycle model instead of a static image",
+        "3D models are styled to match the bike types (sport bikes with appropriate colors: red, black, white)",
+        "Users can rotate the 3D bike models by hovering or dragging",
+        "3D models load performantly without blocking the UI",
+        "Bike specifications and pricing remain visible below the 3D model",
+        "3D scenes maintain aspect ratio and responsiveness across screen sizes"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/BikeGallery.tsx",
-          "operation": "modify",
-          "description": "Review the BikeGallery component section heading and container elements to check if any logo images are referenced. If found, update them to use frontend/public/assets/generated/karthikeyan-logo.dim_200x200.png to ensure visual consistency across all logo instances."
+          "path": "frontend/src/components/BikeModel3D.tsx",
+          "operation": "create",
+          "description": "Create a 3D motorcycle model component using React Three Fiber that renders a sport bike geometry with color prop (red, black, or white) applied to MeshStandardMaterial, includes OrbitControls from @react-three/drei for interactive rotation, uses Suspense with fallback for progressive loading, and references the generated bike images (frontend/public/assets/generated/bike-red-sport.dim_800x600.png, frontend/public/assets/generated/bike-black-sport.dim_800x600.png, frontend/public/assets/generated/bike-white-sport.dim_800x600.png) as texture references"
         },
         {
-          "path": "frontend/src/components/HeroBanner.tsx",
+          "path": "frontend/src/components/BikeCard.tsx",
           "operation": "modify",
-          "description": "Review the HeroBanner component for any logo image references in the hero section container or call-to-action button elements. If found, update them to use frontend/public/assets/generated/karthikeyan-logo.dim_200x200.png to maintain visual consistency."
+          "description": "Replace the static bike image with BikeModel3D component wrapped in Canvas from @react-three/fiber, passing appropriate color prop based on bike data, maintain existing specifications and pricing layout below the 3D scene, and ensure the Canvas maintains aspect ratio and responsiveness"
+        },
+        {
+          "path": "frontend/src/data/bikes.ts",
+          "operation": "modify",
+          "description": "Add a color field to the Bike interface and update each bike object with corresponding color values (red for Red Thunder Sport, black for Black Phantom Elite, white for White Lightning Pro) to drive the 3D model appearance"
         }
       ]
     }
